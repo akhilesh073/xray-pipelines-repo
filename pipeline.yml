@@ -3,7 +3,7 @@ resources:
     type: GitRepo
     configuration:
       gitProvider: s_gitHub
-      path: abhishekk012/xray-pipelines-repo
+      path: akhilesh073/xray-pipelines-repo
       branches:
         include: .*
   - name: S_NpmPublish_6679_001_buildInfo
@@ -18,8 +18,8 @@ pipelines:
         type: NpmBuild
         configuration:
           affinityGroup: S_NpmPublish_6679_001
-          sourceLocation: "tests/npm"
-          resolverRepo: "test-automation-npm-remote"
+          sourceLocation: 'tests/npm'
+          resolverRepo: 'test-automation-npm-remote'
           integrations:
             - name: s_artifactory
           inputResources:
@@ -29,7 +29,7 @@ pipelines:
         configuration:
           affinityGroup: S_NpmPublish_6679_001
           autoPublishBuildInfo: true
-          deployerRepo: "test-automation-npm-local"
+          deployerRepo: 'test-automation-npm-local'
           forceXrayScan: true
           integrations:
             - name: s_artifactory
